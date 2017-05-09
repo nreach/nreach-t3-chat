@@ -25,7 +25,6 @@ define([
     if (HTMLCollection.prototype[Symbol.iterator] ==  null)
         HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
-
     $(document).ready(function(){
         var active = false,
             element = document.body.appendChild(document.createElement('div')),
