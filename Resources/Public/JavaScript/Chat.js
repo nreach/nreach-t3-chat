@@ -3,7 +3,7 @@ requirejs.config({
         NreachUI: [
             'http://localhost:3001/webpack/NreachUI',
             //If the dev version fails, load local
-            '../typo3conf/ext/nreacht3/Resources/Public/JavaScript/lib/NreachUI'
+            '../typo3conf/ext/nreach_t3_base/Resources/Public/JavaScript/lib/NreachUI'
         ]
     }
 });
@@ -15,7 +15,7 @@ requirejs.config({
  */
 define([
     'jquery',
-    './Remote',
+    'TYPO3/CMS/NreachT3Base/Remote',
     'NreachUI'
 ], function (
     $,
@@ -24,7 +24,6 @@ define([
 ) {
     if (HTMLCollection.prototype[Symbol.iterator] ==  null)
         HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
-
 
 
     $(document).ready(function(){
@@ -36,7 +35,7 @@ define([
             if (!instance)
                 instance = new NreachUI.default(['Chat'], element, {}, Remote);
             else if (active)
-                instance.hide()
+                instance.hide();
             else
                 instance.render();
             active = !active;

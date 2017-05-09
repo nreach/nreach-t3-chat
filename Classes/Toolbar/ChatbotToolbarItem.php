@@ -1,5 +1,5 @@
 <?php
-namespace Nreach\T3Base\Toolbar;
+namespace Nreach\T3Chat\Toolbar;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -29,7 +29,7 @@ class ChatbotToolbarItem implements ToolbarItemInterface
      */
     public function __construct()
     {
-        $this->getPageRenderer()->loadRequireJsModule('TYPO3/CMS/T3Base/Chat');
+        $this->getPageRenderer()->loadRequireJsModule('TYPO3/CMS/NreachT3Chat/Chat');
     }
 
     /**
