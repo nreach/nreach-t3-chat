@@ -49,7 +49,7 @@ class ChatbotToolbarItem implements ToolbarItemInterface
      */
     public function getItem()
     {
-        return '<button id="chatbottoggle">Chatbot!</button>';
+        return '<a id="nreach-chatbottoggle" onClick="return false;" class="toolbar-item-link">Chatbot</a>';
     }
 
     public function hasDropDown()

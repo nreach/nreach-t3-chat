@@ -30,7 +30,7 @@ define([
             element = document.body.appendChild(document.createElement('div')),
             instance = null;
 
-        $('#chatbottoggle').click(function() {
+        $('#nreach-chatbottoggle').click(function() {
             if (!instance)
                 instance = new NreachUI.default(['Chat'], element, {}, Remote);
             else if (active)
